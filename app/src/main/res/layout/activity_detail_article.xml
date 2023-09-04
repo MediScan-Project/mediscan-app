@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_item_photo"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="@string/content"
+                android:scaleType="centerCrop"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="11dp"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/title_article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/livvic_bold"
+                android:textColor="@color/blue"
+                android:textSize="26sp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:text="@string/title" />
+
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/livvicmedium"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                tools:text="@string/content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/livvicmedium"
+                android:text="@string/source"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_item_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="40dp"
+                android:autoLink="all"
+                android:fontFamily="@font/livvicmedium"
+                android:justificationMode="inter_word"
+                android:textColorLink="@color/blue_100"
+                android:textSize="16sp"
+                tools:text="@string/link" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/buttonBackArticle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card_button"
+            android:clickable="true"
+            android:padding="5dp"
+            android:src="@drawable/arrow_black" />
+
+    </RelativeLayout>
+
+</ScrollView>
