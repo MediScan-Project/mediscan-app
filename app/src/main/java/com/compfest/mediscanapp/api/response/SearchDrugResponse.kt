@@ -16,17 +16,8 @@ data class SearchDrugResponse(
 
 data class DataItem(
 
-	@field:SerializedName("golonganObat")
-	val golonganObat: String,
-
 	@field:SerializedName("komposisi")
 	val komposisi: String,
-
-	@field:SerializedName("kemasan")
-	val kemasan: String,
-
-	@field:SerializedName("efekSamping")
-	val efekSamping: String,
 
 	@field:SerializedName("nomorIzin")
 	val nomorIzin: String,
@@ -34,14 +25,29 @@ data class DataItem(
 	@field:SerializedName("manfaat")
 	val manfaat: String,
 
-	@field:SerializedName("namaObat")
-	val namaObat: String,
-
 	@field:SerializedName("dosis")
 	val dosis: String,
 
+	@field:SerializedName("gambarObat")
+	val gambarObat: String,
+
+	@field:SerializedName("golonganObat")
+	val golonganObat: String,
+
+	@field:SerializedName("kemasan")
+	val kemasan: String,
+
+	@field:SerializedName("efekSamping")
+	val efekSamping: String,
+
+	@field:SerializedName("namaObat")
+	val namaObat: String,
+
 	@field:SerializedName("penyajian")
 	val penyajian: String,
+
+	@field:SerializedName("id")
+	val id: Int,
 
 	@field:SerializedName("resepDokter")
 	val resepDokter: String,

@@ -26,7 +26,7 @@
             <ImageView
                 android:id="@+id/img_item_article"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
                 tools:layout_editor_absoluteX="16dp"

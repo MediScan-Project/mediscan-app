@@ -14,7 +14,7 @@ interface ApiService {
         @Query("per_page") perPage: Int
     ): SearchDrugResponse
 
-    @GET("/articles")
+    @GET("/all-articles")
     suspend fun articleDrug(
         @Query("page") page: Int,
         @Query("per_page") perPage: Int

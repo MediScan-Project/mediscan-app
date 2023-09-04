@@ -28,17 +28,17 @@ class ArticleAdapter : PagingDataAdapter<DataArtikelItem, ArticleAdapter.ListVie
         fun bind(userData: DataArtikelItem) {
             binding.apply {
                 Glide.with(itemView)
-                    .load(userData.image)
+                    .load(userData.gambar)
                     .into(binding.imgItemArticle)
-                binding.titleArticle.text = userData.title
-                binding.contentArticle.text = userData.content
+                binding.titleArticle.text = userData.judul
+                binding.contentArticle.text = userData.artikel
             }
             itemView.setOnClickListener{
                 val intentToDetail = Intent(itemView.context, DetailArticleActivity::class.java)
-                intentToDetail.putExtra(DetailArticleActivity.NAME_EXTRA, userData.title)
-                intentToDetail.putExtra(DetailArticleActivity.DESCRIPTION_EXTRA, userData.content)
-                intentToDetail.putExtra(DetailArticleActivity.PHOTO_EXTRA, userData.image)
-                intentToDetail.putExtra(DetailArticleActivity.LINK_EXTRA, userData.link)
+                intentToDetail.putExtra(DetailArticleActivity.NAME_EXTRA, userData.judul)
+                intentToDetail.putExtra(DetailArticleActivity.DESCRIPTION_EXTRA, userData.artikel)
+                intentToDetail.putExtra(DetailArticleActivity.PHOTO_EXTRA, userData.gambar)
+                intentToDetail.putExtra(DetailArticleActivity.LINK_EXTRA, userData.referensi)
                 itemView.context.startActivity(intentToDetail)
             }
         }

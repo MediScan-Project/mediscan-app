@@ -10,18 +10,18 @@ data class ArticleDrugResponse(
 
 data class DataArtikelItem(
 
-	@field:SerializedName("image")
-	val image: String,
+	@field:SerializedName("artikel")
+	val artikel: String,
 
-	@field:SerializedName("link")
-	val link: String,
+	@field:SerializedName("referensi")
+	val referensi: String,
 
 	@field:SerializedName("id")
 	val id: Int,
 
-	@field:SerializedName("title")
-	val title: String,
+	@field:SerializedName("judul")
+	val judul: String,
 
-	@field:SerializedName("content")
-	val content: String
+	@field:SerializedName("gambar")
+	val gambar: String
 )

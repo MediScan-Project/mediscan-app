@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.compfest.mediscanapp.api.response.DataItem
 import com.compfest.mediscanapp.databinding.ItemDrugBinding
 import com.compfest.mediscanapp.ui.resultdrug.ResultDrugActivity
@@ -28,15 +29,16 @@ class SearchDrugAdapter : PagingDataAdapter<DataItem, SearchDrugAdapter.ListView
         RecyclerView.ViewHolder(binding.root) {
         fun bind(userData: DataItem) {
             binding.apply {
-//                Glide.with(itemView)
-//                    .load(userData.).circleCrop()
-//                    .into(binding.imageView2)
+                Glide.with(itemView)
+                    .load(userData.gambarObat).circleCrop()
+                    .into(binding.imageView2)
                 binding.tvItemName.text = userData.namaObat
                 binding.tvItemDescription.text = userData.golonganObat
             }
             itemView.setOnClickListener{
                 val intentToDetail = Intent(itemView.context, ResultDrugActivity::class.java)
                 intentToDetail.putExtra(ResultDrugActivity.NAME_EXTRA, userData.namaObat)
+                intentToDetail.putExtra(ResultDrugActivity.PHOTO_EXTRA, userData.gambarObat)
                 intentToDetail.putExtra(ResultDrugActivity.DESCRIPTION_EXTRA, userData.deskripsi)
                 intentToDetail.putExtra(ResultDrugActivity.RESEP_EXTRA, userData.resepDokter)
                 intentToDetail.putExtra(ResultDrugActivity.DOSIS_EXTRA, userData.dosis)
@@ -44,6 +46,7 @@ class SearchDrugAdapter : PagingDataAdapter<DataItem, SearchDrugAdapter.ListView
                 intentToDetail.putExtra(ResultDrugActivity.ATURAN_EXTRA, userData.penyajian)
                 intentToDetail.putExtra(ResultDrugActivity.MANFAAT_EXTRA, userData.manfaat)
                 intentToDetail.putExtra(ResultDrugActivity.GOLONGAN_EXTRA, userData.golonganObat)
+                intentToDetail.putExtra(ResultDrugActivity.EFEK_SAMPING, userData.efekSamping)
 
                 itemView.context.startActivity(intentToDetail)
             }

@@ -20,6 +20,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/imageDrug"
                     android:layout_width="match_parent"
                     android:layout_height="350dp"
                     android:scaleType="centerCrop"
@@ -188,12 +189,31 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:layout_marginBottom="30dp"
                         android:fontFamily="@font/livvicmedium"
                         android:text="@string/drug_golongan"
                         android:textColor="@color/grey"
                         android:textSize="16sp" />
 
+                    <TextView
+                        android:id="@+id/efektitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/livvic_bold"
+                        android:text="@string/efek"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/efekObat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="30dp"
+                        android:fontFamily="@font/livvicmedium"
+                        android:text="@string/drug_golongan"
+                        android:textColor="@color/grey"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
             </FrameLayout>

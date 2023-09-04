@@ -15,7 +15,7 @@ class ResultDrugActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
-//        val photo = intent.getStringExtra(PHOTO_EXTRA)
+        val photo = intent.getStringExtra(PHOTO_EXTRA)
         val name = intent.getStringExtra(NAME_EXTRA)
         val description = intent.getStringExtra(DESCRIPTION_EXTRA)
         val dosis = intent.getStringExtra(DOSIS_EXTRA)
@@ -24,12 +24,13 @@ class ResultDrugActivity : AppCompatActivity() {
         val simpan = intent.getStringExtra(MANFAAT_EXTRA)
         val golongan = intent.getStringExtra(GOLONGAN_EXTRA)
         val resep = intent.getStringExtra(RESEP_EXTRA)
+        val efek = intent.getStringExtra(EFEK_SAMPING)
 
         button ()
 
-//        Glide.with(this@ResultDrugActivity)
-//            .load(photo)
-//            .into(binding.imgItemPhoto)
+        Glide.with(this@ResultDrugActivity)
+            .load(photo)
+            .into(binding.imageDrug)
         binding.namaObat.text = name
         binding.deskripsiObat.text = description
         binding.dosisObat.text = dosis
@@ -38,6 +39,7 @@ class ResultDrugActivity : AppCompatActivity() {
         binding.simpanObat.text = simpan
         binding.golonganObat.text = golongan
         binding.resep.text = resep
+        binding.efekObat.text = efek
     }
 
     private fun button (){
@@ -56,6 +58,7 @@ class ResultDrugActivity : AppCompatActivity() {
         const val ATURAN_EXTRA = "ATURAN"
         const val MANFAAT_EXTRA = "MANFAAT"
         const val GOLONGAN_EXTRA = "GOLONGAN"
+        const val EFEK_SAMPING = "EFEK SAMPING"
 
     }
 }
